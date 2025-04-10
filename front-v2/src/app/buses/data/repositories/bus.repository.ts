@@ -40,6 +40,8 @@ export class BusRepository {
     }
 
     deleteById(idBus: number): Observable<void> {
-        return this.http.delete<void>(`${this.apiUrl}/${idBus}`);
+        return this.http.delete<void>(`${this.apiUrl}/${idBus}`).pipe(
+            catchError(() => of(void 0)),
+        );
     }
 }
