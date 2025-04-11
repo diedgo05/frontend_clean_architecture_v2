@@ -1,0 +1,49 @@
+<div class="main">
+    <div class="container">
+  
+      <!-- Ícono de salida o cerrar (ejemplo: una "X") -->
+      <svg id="exit" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+           stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="18" y1="6" x2="6" y2="18" />
+        <line x1="6" y1="6" x2="18" y2="18" />
+      </svg>
+  
+      <div class="heading">
+        <h1>Registro de buses</h1>
+      </div>
+  
+      <form (ngSubmit)="registrarBus()" #busForm="ngForm">
+  
+        <!-- Campo Placa -->
+        <label for="placa">Placa</label>
+        <input type="text" id="placa" name="placa" [(ngModel)]="bus.Placa" placeholder="placa" />
+        <br>
+  
+        <!-- Campo Capacidad -->
+        <label for="capacidad">Capacidad</label>
+        <input type="number" id="capacidad" name="capacidad" [(ngModel)]="bus.Capacidad" placeholder="capacidad" />
+        <br>
+  
+        <!-- Campo Chofer ID -->
+        <div class="exp-cvc">
+          <div class="expiration">
+            <label for="choferId">Chofer ID</label>
+            <input class="inputCard" id="choferId" name="choferId" [(ngModel)]="bus.ChoferID" type="text" placeholder="chofer id" />
+            <br>
+          </div>
+        </div>
+  
+        <!-- Botón Registrar -->
+        <div class="btn">
+          <button type="submit" class="submit-button">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none"
+                 stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polyline points="20 6 9 17 4 12" />
+            </svg>
+            Registrar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+  <app-buses-list></app-buses-list>

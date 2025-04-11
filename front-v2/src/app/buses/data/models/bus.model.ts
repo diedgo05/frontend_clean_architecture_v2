@@ -1,7 +1,8 @@
 export class Bus {
     constructor (
-        public placa: string,
-        public capacidad: number,
-        public choferId: number
+        public Placa: string,
+        public Capacidad: number,
+        public Disponible: boolean,
+        public ChoferID: number
     ) {}
 }

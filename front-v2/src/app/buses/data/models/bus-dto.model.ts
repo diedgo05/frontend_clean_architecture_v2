@@ -1,8 +1,9 @@
 export class BusDTO {
     constructor(
-        public idbus: number,
-        public placa: string,
-        public capacidad: number,
-        public choferId: number,
+        public Idbus: number,
+        public Placa: string,
+        public Capacidad: number,
+        public Disponible: boolean,
+        public ChoferID: number,
     ) {}
 }
